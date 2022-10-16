@@ -1,0 +1,20 @@
+%module SWIG_Example
+%include "std_string.i"
+%include "std_vector.i"
+%include "typemaps.i"
+
+%{
+#include "MyStaticClass.h"
+#include "MyStruct.h"
+#include "MyCppClass.h"	
+using namespace Tom;
+using namespace std;
+%}
+
+%include "MyStruct.h"
+extern struct Tom::MyVector3;
+extern struct Tom::MyCoordinate;
+
+%include "MyStaticClass.h"
+%template(Vector3Collection) std::vector<Tom::MyVector3>;
+%include "MyCppClass.h"
