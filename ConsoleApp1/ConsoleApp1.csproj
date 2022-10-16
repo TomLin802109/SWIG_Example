@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C8E3785-9AD8-47D1-BB2A-E5303880F51C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SIWG_Example\Swig_interface\MyCoordinate.cs">
+      <Link>CppWrapper\MyCoordinate.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\MyCppClass.cs">
+      <Link>CppWrapper\MyCppClass.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\MyData.cs">
+      <Link>CppWrapper\MyData.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\MyStaticClass.cs">
+      <Link>CppWrapper\MyStaticClass.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\MyVector3.cs">
+      <Link>CppWrapper\MyVector3.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\SWIGTYPE_p_MyVector3.cs">
+      <Link>CppWrapper\SWIGTYPE_p_MyVector3.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\SWIGTYPE_p_std__string.cs">
+      <Link>CppWrapper\SWIGTYPE_p_std__string.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\SWIGTYPE_p_std__vectorT_Tom__MyVector3_t.cs">
+      <Link>CppWrapper\SWIGTYPE_p_std__vectorT_Tom__MyVector3_t.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\SWIG_Example.cs">
+      <Link>CppWrapper\SWIG_Example.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\SWIG_ExamplePINVOKE.cs">
+      <Link>CppWrapper\SWIG_ExamplePINVOKE.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\Vector3Collection.cs">
+      <Link>CppWrapper\Vector3Collection.cs</Link>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SWIG_Example.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
