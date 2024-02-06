@@ -1,4 +1,5 @@
 .vs/
-SIWG_Example/x64/
+x64/
 ConsoleApp1/obj/
 ConsoleApp1/bin/
+SIWG_Example/SWIG_Example_wrap.cxx
