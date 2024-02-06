@@ -7,6 +7,7 @@
 #include "MyStaticClass.h"
 #include "MyStruct.h"
 #include "MyCppClass.h"	
+#include "inherit.h"
 using namespace Tom;
 using namespace std;
 %}
@@ -18,3 +19,7 @@ extern struct Tom::MyCoordinate;
 %include "MyStaticClass.h"
 %template(Vector3Collection) std::vector<Tom::MyVector3>;
 %include "MyCppClass.h"
+
+
+%include "inherit.h"
+%template(IntArray) std::vector<int>;

@@ -122,6 +122,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
     </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetDir)$(ProjectName).dll $(SolutionDir)ConsoleApp1\bin\Debug\$(ProjectName).dll</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -144,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
+    <ClInclude Include="inherit.h" />
     <ClInclude Include="MyCppClass.h" />
     <ClInclude Include="MyStaticClass.h" />
     <ClInclude Include="MyStruct.h" />
@@ -151,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="inherit.cpp" />
     <ClCompile Include="MyCppClass.cpp" />
     <ClCompile Include="MyStaticClass.cpp" />
     <ClCompile Include="pch.cpp">
@@ -163,7 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="SWIG_Example.idl">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">swig.exe -c++ -csharp -namespace TomCpp -outdir $(ProjectDir)Swig_interface -I %(Filename).idl</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">swig.exe -c++ -csharp -namespace Quadrep.CppAlgo -outdir $(ProjectDir)Swig_interface -I %(Filename).idl</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename)_wrap.cxx;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>

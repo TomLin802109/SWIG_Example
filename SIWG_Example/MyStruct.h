@@ -11,7 +11,9 @@ namespace Tom {
 		MyVector3(double x, double y, double z) {
 			this->X = x; this->Y = y; this->Z = z;
 		}
-
+		/*MyVector3 operator+(const MyVector3& vec) const {
+			return MyVector3(vec.X + X, vec.Y + Y, vec.Z + Z);
+		}*/
 	};
 
 	struct MyData {

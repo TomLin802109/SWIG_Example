@@ -13,7 +13,6 @@ namespace Tom {
 		double Add(double a, double b) {
 			return PrivateAdd(a, b);
 		}
-
 		MyVector3 CreateVector3();
 		MyVector3 Cross(MyVector3 a, MyVector3 b) {
 			return MyVector3(a.Y * b.Z - a.Z * b.Y, a.Z * b.X - a.X * b.Z, a.X * b.Y - a.Y * b.X);
