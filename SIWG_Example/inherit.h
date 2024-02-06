@@ -13,13 +13,14 @@ namespace Tom {
 		virtual void ShowSelfName();
 		std::vector<int> GetIndices();
 		std::vector<MyVector3> GetDataArray();
-		void ActivateException(const unsigned int id) const {
-			switch (id) {
-			case 1:
-				throw std::exception("cpp std exception");
-			case 2:
-				throw std::out_of_range("cpp std out of range exception");
-			}
+		void ActivateStdException1() const {
+			throw std::exception("cpp std exception");
+		}
+		void ActivateStdException2() const {
+			throw std::out_of_range("cpp argument: index");
+		}
+		void ActivateStdException3() const {
+			throw std::invalid_argument("cpp argument: id");
 		}
 	protected:
 		ParentClass() = default;

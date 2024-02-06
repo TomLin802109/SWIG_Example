@@ -12,15 +12,8 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             var my = new Child_A();
-            my.ActivateException(1);
-            try
-            {
-                
-            }
-            catch (Exception ex)
-            {
-                ;
-            }
+            my.ActivateStdException1();
+
             
 
             var vec3_nan = new MyVector3();

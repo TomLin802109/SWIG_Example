@@ -168,7 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="SWIG_Example.idl">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">swig.exe -c++ -csharp -namespace Quadrep.CppAlgo -outdir $(ProjectDir)Swig_interface -I %(Filename).idl</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">swig.exe -c++ -csharp -namespace Quadrep.CppAlgo -outdir $(SolutionDir)cs_wrapper -I %(Filename).idl</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename)_wrap.cxx;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>

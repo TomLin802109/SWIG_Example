@@ -45,40 +45,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\SIWG_Example\Swig_interface\Child_A.cs">
+    <Compile Include="..\cs_wrapper\Child_A.cs">
       <Link>CppWrapper\Child_A.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\Child_B.cs">
+    <Compile Include="..\cs_wrapper\Child_B.cs">
       <Link>CppWrapper\Child_B.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\IntArray.cs">
+    <Compile Include="..\cs_wrapper\IntArray.cs">
       <Link>CppWrapper\IntArray.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\MyCoordinate.cs">
+    <Compile Include="..\cs_wrapper\MyCoordinate.cs">
       <Link>CppWrapper\MyCoordinate.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\MyCppClass.cs">
+    <Compile Include="..\cs_wrapper\MyCppClass.cs">
       <Link>CppWrapper\MyCppClass.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\MyData.cs">
+    <Compile Include="..\cs_wrapper\MyData.cs">
       <Link>CppWrapper\MyData.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\MyStaticClass.cs">
+    <Compile Include="..\cs_wrapper\MyStaticClass.cs">
       <Link>CppWrapper\MyStaticClass.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\MyVector3.cs">
+    <Compile Include="..\cs_wrapper\MyVector3.cs">
       <Link>CppWrapper\MyVector3.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\ParentClass.cs">
+    <Compile Include="..\cs_wrapper\ParentClass.cs">
       <Link>CppWrapper\ParentClass.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\SWIG_Example.cs">
+    <Compile Include="..\cs_wrapper\SWIG_Example.cs">
       <Link>CppWrapper\SWIG_Example.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\SWIG_ExamplePINVOKE.cs">
+    <Compile Include="..\cs_wrapper\SWIG_ExamplePINVOKE.cs">
       <Link>CppWrapper\SWIG_ExamplePINVOKE.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\Vector3Collection.cs">
+    <Compile Include="..\cs_wrapper\Vector3Collection.cs">
       <Link>CppWrapper\Vector3Collection.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />

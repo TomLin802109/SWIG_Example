@@ -2,24 +2,44 @@
 %include "std_string.i"
 %include "std_vector.i"
 %include "typemaps.i"
-
+%include "exception.i"
+%define USE_SWIG
+%enddef
 %{
 #include "MyStaticClass.h"
 #include "MyStruct.h"
 #include "MyCppClass.h"	
 #include "inherit.h"
+#include <stdexcept>
 using namespace Tom;
 using namespace std;
 %}
 
 %include "MyStruct.h"
-extern struct Tom::MyVector3;
-extern struct Tom::MyCoordinate;
 
 %include "MyStaticClass.h"
 %template(Vector3Collection) std::vector<Tom::MyVector3>;
 %include "MyCppClass.h"
-
-
+%exception; //Deletes any previously defined handler
+/// mapping std exception to target language
+/// it apply to all function after
+%exception{
+try{
+	$action
+}
+catch(const std::out_of_range& e) {
+	SWIG_exception(SWIG_IndexError, e.what());
+}
+catch(const std::invalid_argument& e) {
+	SWIG_exception(SWIG_ValueError, e.what());
+}
+catch(const std::exception& e) {
+	SWIG_exception(SWIG_RuntimeError, e.what());
+}
+catch(...) {
+	SWIG_exception(SWIG_RuntimeError, "unknow exception from cpp");
+}
+}
 %include "inherit.h"
+%feature("director") ParentClass;
 %template(IntArray) std::vector<int>;
