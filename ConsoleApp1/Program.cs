@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TomCpp;
+using Quadrep.CppAlgo;
 
 namespace ConsoleApp1
 {
@@ -11,17 +11,28 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            MyCppClass myCppClass = new MyCppClass();
-            var num = myCppClass.Add(3.1415926, 31.415926);
+            var my = new Child_A();
+            my.ActivateException(1);
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                ;
+            }
+            
+
             var vec3_nan = new MyVector3();
             MyVector3 vec3 = new MyVector3(1.1, 2.2, 3.3);
-            
+            MyCppClass myCppClass = new MyCppClass();
+            var num = myCppClass.Add(3.1415926, 31.415926);
             MyCoordinate crd = new MyCoordinate(vec3, vec3, vec3);
             var data = new MyData(1.2, "123456", 255, 34567, 3.1415f);
             var str = crd.CoordinateString;
             var crt = myCppClass.CreateVector3();
             var axis = myCppClass.Cross(new MyVector3(1, 0, 0), new MyVector3(0, 1, 0));
-            TomCpp.MyStaticClass.ShowMessage("ABC");
+            Quadrep.CppAlgo.MyStaticClass.ShowMessage("ABC");
             var collection = myCppClass.GetMyCollection();
             foreach (var i in collection)
                 Console.WriteLine(toString(i));

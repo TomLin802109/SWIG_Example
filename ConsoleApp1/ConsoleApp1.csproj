@@ -45,6 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\SIWG_Example\Swig_interface\Child_A.cs">
+      <Link>CppWrapper\Child_A.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\Child_B.cs">
+      <Link>CppWrapper\Child_B.cs</Link>
+    </Compile>
+    <Compile Include="..\SIWG_Example\Swig_interface\IntArray.cs">
+      <Link>CppWrapper\IntArray.cs</Link>
+    </Compile>
     <Compile Include="..\SIWG_Example\Swig_interface\MyCoordinate.cs">
       <Link>CppWrapper\MyCoordinate.cs</Link>
     </Compile>
@@ -60,14 +69,8 @@
     <Compile Include="..\SIWG_Example\Swig_interface\MyVector3.cs">
       <Link>CppWrapper\MyVector3.cs</Link>
     </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\SWIGTYPE_p_MyVector3.cs">
-      <Link>CppWrapper\SWIGTYPE_p_MyVector3.cs</Link>
-    </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\SWIGTYPE_p_std__string.cs">
-      <Link>CppWrapper\SWIGTYPE_p_std__string.cs</Link>
-    </Compile>
-    <Compile Include="..\SIWG_Example\Swig_interface\SWIGTYPE_p_std__vectorT_Tom__MyVector3_t.cs">
-      <Link>CppWrapper\SWIGTYPE_p_std__vectorT_Tom__MyVector3_t.cs</Link>
+    <Compile Include="..\SIWG_Example\Swig_interface\ParentClass.cs">
+      <Link>CppWrapper\ParentClass.cs</Link>
     </Compile>
     <Compile Include="..\SIWG_Example\Swig_interface\SWIG_Example.cs">
       <Link>CppWrapper\SWIG_Example.cs</Link>
@@ -84,10 +87,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="SWIG_Example.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
